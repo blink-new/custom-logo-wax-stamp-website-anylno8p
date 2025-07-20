@@ -7,7 +7,7 @@ import { Separator } from './components/ui/separator';
 import { Input } from './components/ui/input';
 import { Textarea } from './components/ui/textarea';
 import { Label } from './components/ui/label';
-import { Star, Check, Palette, Stamp, Sticker, Crown, Sparkles, Mail, Phone, MapPin } from 'lucide-react';
+import { Star, Check, Palette, Stamp, Sticker, Crown, Sparkles, Mail, Phone, MapPin, Flame } from 'lucide-react';
 
 function App() {
   return (
@@ -39,10 +39,10 @@ function App() {
           <div className="max-w-3xl mx-auto">
             <h1 className="text-5xl font-bold text-gray-900 mb-6">
               Custom Logo Design with 
-              <span className="text-amber-600"> Wax Stamp Magic</span>
+              <span className="text-amber-600"> Wax Stamps & Candles</span>
             </h1>
             <p className="text-xl text-gray-600 mb-8">
-              Professional logo design packages with custom stickers and authentic wax stamps. 
+              Professional logo design packages with custom stickers, authentic wax stamps, and branded candles. 
               Perfect for small businesses and personal branding that makes a lasting impression.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -66,7 +66,7 @@ function App() {
             <h2 className="text-3xl font-bold text-gray-900 mb-4">Why Choose LogoCraft Studio?</h2>
             <p className="text-lg text-gray-600">Professional design meets authentic craftsmanship</p>
           </div>
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="text-center">
               <div className="w-16 h-16 bg-amber-100 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Palette className="h-8 w-8 text-amber-600" />
@@ -87,6 +87,13 @@ function App() {
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-2">Authentic Wax Stamps</h3>
               <p className="text-gray-600">Custom wax stamps from premium Australian suppliers for that luxury touch</p>
+            </div>
+            <div className="text-center">
+              <div className="w-16 h-16 bg-amber-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Flame className="h-8 w-8 text-amber-600" />
+              </div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-2">Branded Candles</h3>
+              <p className="text-gray-600">Custom scented candles with your logo for premium gifting and brand experiences</p>
             </div>
           </div>
         </div>
@@ -140,6 +147,25 @@ function App() {
               </CardContent>
             </Card>
 
+            {/* Candle Package */}
+            <Card className="relative">
+              <CardHeader>
+                <div className="flex items-center justify-between">
+                  <CardTitle className="text-lg">Candle — Logo + Branded Candle</CardTitle>
+                  <Badge variant="secondary">🕯️</Badge>
+                </div>
+                <CardDescription className="text-2xl font-bold text-amber-600">$45–$65 AUD</CardDescription>
+              </CardHeader>
+              <CardContent>
+                <ul className="space-y-2 text-sm">
+                  <li className="flex items-center"><Check className="h-4 w-4 text-green-500 mr-2" />Everything in Basic</li>
+                  <li className="flex items-center"><Check className="h-4 w-4 text-green-500 mr-2" />Custom branded candle design</li>
+                  <li className="flex items-center"><Check className="h-4 w-4 text-green-500 mr-2" />Scent selection guide</li>
+                </ul>
+                <Button className="w-full mt-4 bg-amber-600 hover:bg-amber-700">Choose Candle</Button>
+              </CardContent>
+            </Card>
+
             {/* Wax Stamp Package */}
             <Card className="relative">
               <CardHeader>
@@ -167,7 +193,7 @@ function App() {
                   <CardTitle className="text-lg">Premium — Logo + Sticker + Wax Stamp</CardTitle>
                   <Badge variant="secondary">🔴</Badge>
                 </div>
-                <CardDescription className="text-2xl font-bold text-amber-600">$60–$80 AUD</CardDescription>
+                <CardDescription className="text-2xl font-bold text-amber-600">$70–$90 AUD</CardDescription>
               </CardHeader>
               <CardContent>
                 <ul className="space-y-2 text-sm">
@@ -179,19 +205,39 @@ function App() {
               </CardContent>
             </Card>
 
+            {/* Deluxe Package */}
+            <Card className="relative border-orange-200">
+              <CardHeader>
+                <div className="flex items-center justify-between">
+                  <CardTitle className="text-lg">Deluxe — Logo + Sticker + Candle</CardTitle>
+                  <Badge variant="secondary">🔥</Badge>
+                </div>
+                <CardDescription className="text-2xl font-bold text-amber-600">$75–$95 AUD</CardDescription>
+              </CardHeader>
+              <CardContent>
+                <ul className="space-y-2 text-sm">
+                  <li className="flex items-center"><Check className="h-4 w-4 text-green-500 mr-2" />Logo, sticker, and branded candle</li>
+                  <li className="flex items-center"><Check className="h-4 w-4 text-green-500 mr-2" />Custom scent selection</li>
+                  <li className="flex items-center"><Check className="h-4 w-4 text-green-500 mr-2" />2–3 revisions</li>
+                </ul>
+                <Button className="w-full mt-4 bg-amber-600 hover:bg-amber-700">Choose Deluxe</Button>
+              </CardContent>
+            </Card>
+
             {/* Elite Package */}
             <Card className="relative">
               <CardHeader>
                 <div className="flex items-center justify-between">
-                  <CardTitle className="text-lg">Elite — All Logo Versions + Mockups</CardTitle>
+                  <CardTitle className="text-lg">Elite — Logo + Sticker + Wax + Candle</CardTitle>
                   <Badge variant="secondary">🟤</Badge>
                 </div>
-                <CardDescription className="text-2xl font-bold text-amber-600">$80–$120 AUD</CardDescription>
+                <CardDescription className="text-2xl font-bold text-amber-600">$100–$140 AUD</CardDescription>
               </CardHeader>
               <CardContent>
                 <ul className="space-y-2 text-sm">
-                  <li className="flex items-center"><Check className="h-4 w-4 text-green-500 mr-2" />All logo styles included</li>
+                  <li className="flex items-center"><Check className="h-4 w-4 text-green-500 mr-2" />All logo styles + sticker + wax stamp + candle</li>
                   <li className="flex items-center"><Check className="h-4 w-4 text-green-500 mr-2" />Professional mockups</li>
+                  <li className="flex items-center"><Check className="h-4 w-4 text-green-500 mr-2" />Custom scent selection</li>
                   <li className="flex items-center"><Check className="h-4 w-4 text-green-500 mr-2" />Foil/emboss-ready files</li>
                 </ul>
                 <Button className="w-full mt-4 bg-amber-600 hover:bg-amber-700">Choose Elite</Button>
@@ -209,13 +255,14 @@ function App() {
                   <CardTitle className="text-lg">Ultimate Brand Kit — Full Branding Suite</CardTitle>
                   <Badge variant="secondary">⚜️</Badge>
                 </div>
-                <CardDescription className="text-2xl font-bold text-amber-600">$150–$200 AUD</CardDescription>
+                <CardDescription className="text-2xl font-bold text-amber-600">$180–$250 AUD</CardDescription>
               </CardHeader>
               <CardContent>
                 <ul className="space-y-2 text-sm">
                   <li className="flex items-center"><Check className="h-4 w-4 text-green-500 mr-2" />Everything in Elite plus icon-only and text-only logo versions</li>
                   <li className="flex items-center"><Check className="h-4 w-4 text-green-500 mr-2" />Brand color palette and font choices</li>
                   <li className="flex items-center"><Check className="h-4 w-4 text-green-500 mr-2" />Social media icons and branded mockups</li>
+                  <li className="flex items-center"><Check className="h-4 w-4 text-green-500 mr-2" />Premium candle gift packaging</li>
                 </ul>
                 <Button className="w-full mt-4 bg-gradient-to-r from-amber-600 to-orange-600 hover:from-amber-700 hover:to-orange-700">
                   <Sparkles className="mr-2 h-4 w-4" />
@@ -233,7 +280,7 @@ function App() {
             </CardHeader>
             <CardContent className="text-center">
               <p className="text-gray-600 mb-4">
-                Customize your package by selecting any combination of logos, stickers, stamps, mockups, and revisions. 
+                Customize your package by selecting any combination of logos, stickers, wax stamps, candles, mockups, and revisions. 
                 Tailored to your needs with custom pricing.
               </p>
               <Button variant="outline" className="border-amber-600 text-amber-600 hover:bg-amber-50">
@@ -419,9 +466,11 @@ function App() {
                   <select className="w-full p-2 border border-gray-300 rounded-md">
                     <option>Basic — Just the Logo</option>
                     <option>Standard — Logo + Sticker</option>
+                    <option>Candle — Logo + Branded Candle</option>
                     <option>Wax Stamp — Logo + Wax Stamp</option>
                     <option>Premium — Logo + Sticker + Wax Stamp</option>
-                    <option>Elite — All Logo Versions + Mockups</option>
+                    <option>Deluxe — Logo + Sticker + Candle</option>
+                    <option>Elite — Logo + Sticker + Wax + Candle</option>
                     <option>Ultimate Brand Kit — Full Branding Suite</option>
                     <option>Build Your Own Pack</option>
                   </select>
@@ -458,6 +507,7 @@ function App() {
                 <li>Logo Design</li>
                 <li>Custom Stickers</li>
                 <li>Wax Stamps</li>
+                <li>Branded Candles</li>
                 <li>Brand Packages</li>
               </ul>
             </div>
